@@ -1,4 +1,4 @@
-node('LinuX'){
+node('Linux'){
     stage('checkout'){
        checkout([$class: 'GitSCM', branches: [[name: '*/feature/JIT-1']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ashokreddy7777/Jira.git']]])
     }
