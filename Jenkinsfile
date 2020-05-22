@@ -8,8 +8,11 @@ pipeline{
         }
         stage('Deployment Info'){
             steps{
-                jiraSendDeploymentInfo environmentId: '01', environmentName: 'test', environmentType: 'development', serviceIds: [''], site: 'avrb.atlassian.net', state: 'pending'
+                jiraSendDeploymentInfo environmentId: '01', environmentName: 'dev', environmentType: 'development', serviceIds: [''], site: 'avrb.atlassian.net', state: 'success'
             }
+        }
+        stage ('D info'){
+            jiraSendDeploymentInfo environmentId: '01', environmentName: 'test', environmentType: 'test', serviceIds: [''], site: 'avrb.atlassian.net', state: 'pending'
         }
     }
 }
