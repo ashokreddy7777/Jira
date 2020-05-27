@@ -9,3 +9,4 @@ node('Linux'){
         jiraSendDeploymentInfo environmentId: '02', environmentName: 'test', environmentType: 'testing', site: 'avrb.atlassian.net', state: 'in_progress'
     }
 }
+
