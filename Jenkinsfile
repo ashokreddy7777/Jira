@@ -3,6 +3,6 @@ node('Linux'){
         jiraSendBuildInfo  site: 'avrb.atlassian.net'
     }
     stage('deployment info'){
-        jiraSendDeploymentInfo environmentId: '01', environmentName: 'test', environmentType: 'testing', serviceIds: [''], site: 'avrb.atlassian.net', state: 'in_progress'
+        jiraSendDeploymentInfo environmentId: '02', environmentName: 'test', environmentType: 'testing', site: 'avrb.atlassian.net', state: 'in_progress'
     }
 }
