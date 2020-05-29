@@ -1,6 +1,6 @@
 node('Linux'){
     stage('checkout'){
-       checkout([$class: 'GitSCM', branches: [[name: 'feature/JIT-4']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ashokreddy7777/Jira.git']]])
+       checkout([$class: 'GitSCM', branches: [[name: '${branch}']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ashokreddy7777/Jira.git']]])
     } 
     stage('build info'){
         jiraSendBuildInfo  site: 'avrb.atlassian.net'
